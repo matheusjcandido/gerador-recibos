@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, DM_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmMono = DM_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Gerador de Recibos Grátis - Crie Recibos Profissionais Online",
-  description: "Gere recibos de pagamento profissionais em segundos. Ideal para freelancers, MEI e autônomos. Valor por extenso automático. 100% grátis.",
-  keywords: "gerador de recibos, recibo de pagamento, modelo de recibo, recibo freelancer, recibo mei, recibo online grátis",
-  openGraph: {
-    title: "Gerador de Recibos Grátis",
-    description: "Crie recibos profissionais em segundos - 100% grátis!",
-    type: "website",
-  },
-  robots: "index, follow",
+  title: "Gerador de Recibos Grátis - Crie Recibos Profissionais",
+  description: "Gere recibos de pagamento profissionais em segundos. Valor por extenso automático. 100% grátis.",
+  keywords: "gerador de recibos, recibo de pagamento, modelo de recibo, recibo freelancer, recibo mei",
 };
 
 export default function RootLayout({
@@ -31,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${spaceGrotesk.variable} ${dmMono.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
