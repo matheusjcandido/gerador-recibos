@@ -307,7 +307,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="relative z-10 text-center py-8 no-print">
           <p className="text-[#999] text-sm">
-            Gerador de Recibos © 2025 • Não substitui nota fiscal
+            Gerador de Recibos © 2026 • Não substitui nota fiscal
           </p>
         </footer>
       </main>
